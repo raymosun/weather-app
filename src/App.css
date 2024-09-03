@@ -1,0 +1,65 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.weather {
+  border: 2px rgb(242, 241, 236) solid;
+  border-radius: 16px;
+}
+
+img {
+  height: 128px;
+  width: 128px;
+}
+
+.horizontal {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.temp {
+  display: flex;
+  align-items: center;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 16px;
+  grid-column-gap: 16px;
+}
+
+.details h3 {
+  margin: 8px 16px;
+  text-align: left;
+}
+
+input {
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+  border: 1px solid rgb(242, 241, 236); 
+  width: 600px;
+}
+
+footer {
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  justify-content: center;
+  padding: 4px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  gap: 64px;
+}
+
+.info {
+  cursor: pointer;
+}
