@@ -1,6 +1,11 @@
-import { useRef, useState } from "react";
+import { useRef, useState, Dispatch, SetStateAction } from "react";
 
-const Searchbar = ({setQuery, minDelay = 500}) => {
+interface SearchbarProps {
+  setQuery: Dispatch<SetStateAction<string>>;
+  minDelay?: number;
+}
+
+const Searchbar = ({setQuery, minDelay = 500}: SearchbarProps) => {
   const [localQuery, setLocalQuery] = useState('');
 
   const lastUpdated = useRef(0);
