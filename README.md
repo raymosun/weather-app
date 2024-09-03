@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was made as part of a technical assessment for PM Accelerator. It uses Typescript/React through Vite. Weather and geocoding information is provided by [OpenWeather](https://openweathermap.org/) APIs.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Make you sure have the following installed
+- [Node.js](https://nodejs.org/en) (version 20.x or later)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) (package managers).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Install required dependencies using npm or yarn
+```
+npm install
+# or
+yarn install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Obtain a free API key for [OpenWeather](https://openweathermap.org/api). Create a copy of `.env.example` named `.env` in the root directory and fill in your API key.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Now you can start a development version by running
+```
+npm run dev
+# or
+yarn dev
+````
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Optionally, you can instead create a production build:
+```
+npm run build
+# or
+yarn build
+```
+and preview it
+```
+npm run preview
+# or
+yarn preview
 ```
